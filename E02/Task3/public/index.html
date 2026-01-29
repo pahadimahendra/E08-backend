@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Express API Test</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <h1>User API Test (Task 3)</h1>
+
+    <h2>Add User</h2>
+    <form id="userForm">
+      <input id="name" type="text" placeholder="Name" required />
+      <input id="email" type="email" placeholder="Email" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div id="users"></div>
+
+    <script>
+      async function fetchUsers() {
+        try {
+          const response = await fetch("/api/users");
+          const users = await response.json();
+
+          document.getElementById("users").innerHTML =
+            "<h2>Users:</h2>" +
+            users.map((u) => `<p>${u.id}. ${u.name} - ${u.email}</p>`).join("");
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+
+      document.getElementById("userForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        try {
+          const res = await fetch("/api/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email }),
+          });
+
+          if (!res.ok) {
+            const err = await res.json();
+            alert(err.error);
+            return;
+          }
+
+          document.getElementById("userForm").reset();
+          fetchUsers();
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      });
+
+      fetchUsers();
+    </script>
+  </body>
+</html>

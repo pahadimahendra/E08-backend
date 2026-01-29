@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Album API Frontend</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Album Collection 🎵</h1>
+
+    <section>
+      <h2>Add Album</h2>
+      <form id="albumForm">
+        <input id="artist" placeholder="Artist" required />
+        <input id="title" placeholder="Title" required />
+        <input id="year" type="number" placeholder="Year" required />
+        <input id="genre" placeholder="Genre" required />
+        <input id="tracks" type="number" placeholder="Tracks" required />
+        <button type="submit">Add Album</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <section>
+      <h2>Albums</h2>
+      <div id="albums"></div>
+    </section>
+
+    <script>
+      const API_BASE = "/albums";
+
+      async function loadAlbums() {
+        try {
+          const response = await fetch(API_BASE);
+          const albums = await response.json();
+          displayAlbums(albums);
+        } catch (error) {
+          console.error("Error loading albums:", error);
+        }
+      }
+
+      async function addAlbum(albumData) {
+        try {
+          const response = await fetch(API_BASE, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(albumData),
+          });
+
+          if (response.ok) {
+            document.getElementById("message").textContent = "Album added ✅";
+            loadAlbums();
+          } else {
+            const err = await response.json();
+            document.getElementById("message").textContent =
+              err.error || "Failed to add album";
+          }
+        } catch (error) {
+          console.error("Error adding album:", error);
+        }
+      }
+
+      async function deleteAlbum(id) {
+        try {
+          const response = await fetch(`${API_BASE}/${id}?debug=true`, {
+            method: "DELETE",
+          });
+
+          if (response.ok) {
+            loadAlbums();
+          } else {
+            const err = await response.json();
+            alert(err.error || "Failed to delete album");
+          }
+        } catch (error) {
+          console.error("Error deleting album:", error);
+        }
+      }
+
+      function displayAlbums(albums) {
+        const container = document.getElementById("albums");
+        container.innerHTML = albums
+          .map(
+            (album) => `
+          <div class="album">
+            <h3>${album.title}</h3>
+            <p><strong>Artist:</strong> ${album.artist}</p>
+            <p><strong>Year:</strong> ${album.year} | <strong>Genre:</strong> ${album.genre} | <strong>Tracks:</strong> ${album.tracks}</p>
+            <button onclick="deleteAlbum(${album.id})">Delete</button>
+          </div>
+        `
+          )
+          .join("");
+      }
+
+      document.getElementById("albumForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const albumData = {
+          artist: document.getElementById("artist").value,
+          title: document.getElementById("title").value,
+          year: Number(document.getElementById("year").value),
+          genre: document.getElementById("genre").value,
+          tracks: Number(document.getElementById("tracks").value),
+        };
+
+        addAlbum(albumData);
+        e.target.reset();
+      });
+
+      loadAlbums();
+    </script>
+  </body>
+</html>

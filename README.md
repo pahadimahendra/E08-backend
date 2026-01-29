@@ -1,6 +1,6 @@
 # Exercise diary / Mahendra Pahadi 
 
-#### **Total points: 17/176**
+#### **Total points: 41/176**
 
 ------------------
 
@@ -18,15 +18,15 @@ Total 17/17
 
 ### [Exercise set 2](E02/README.md)
 
-- [ ] Task 1: 0/2 points - Comments
-- [ ] Task 2: 0/4 points - Comments
-- [ ] Task 3: 0/3 points - Comments
-- [ ] Task 4: 0/6 points - Comments
-- [ ] Task 5: 0/4 points - Comments
-- [ ] Task 6: 0/3 points - Comments
-- [ ] Task 7: 0/2 points - Comments
+- [ ] Task 1: 2/2 points - Completed successfully 
+- [ ] Task 2: 4/4 points - Completed successfully 
+- [ ] Task 3: 3/3 points - Works as expected 
+- [ ] Task 4: 6/6 points - Works as expected 
+- [ ] Task 5: 4/4 points - Completed successfully 
+- [ ] Task 6: 3/3 points - Completed successfully  
+- [ ] Task 7: 2/2 points - Completed successfully 
 
-Total 0/24
+Total 24/24
 
 ------------------
 
