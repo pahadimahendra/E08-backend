@@ -1,0 +1,11 @@
+{
+  "name": "task3-cli",
+  "type": "module",
+  "scripts": {
+    "start": "node mongodb_names.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.0.0",
+    "yargs": "^17.7.2"
+  }
+}
