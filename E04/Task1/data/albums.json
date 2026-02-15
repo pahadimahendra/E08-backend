@@ -1,0 +1,28 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "artist": "Toto",
+      "title": "Toto IV (Updated)",
+      "year": 1982,
+      "genre": "Pop",
+      "tracks": 10
+    },
+    {
+      "id": 4,
+      "artist": "Pink Floyd",
+      "title": "The Wall",
+      "year": 1979,
+      "genre": "Progressive Rock",
+      "tracks": 26
+    },
+    {
+      "id": 5,
+      "artist": "Daft Punk",
+      "title": "Discovery",
+      "year": 2001,
+      "genre": "Electronic",
+      "tracks": 14
+    }
+  ]
+}
