@@ -330,8 +330,6 @@ Year range filtering results are shown below:
 
 - ![Task5](./screenshots/Task5startwith1980tolater.png)
 
-- ![Task5](./screenshots/Task5page2.png)
-
 - ![Task5](./screenshots/Task5onlybefore1990.png)
 
 - ![Task5](./screenshots/Task5filterbetween1970to1980.png)
@@ -426,6 +424,8 @@ Pagination makes the API more scalable and efficient when handling large amounts
 Paginated response with metadata is shown below:
 
 - ![Task6](./screenshots/Task6basicpagination.png)
+
+- ![Task6](./screenshots/Task6page2.png)
 
 - ![Task6](./screenshots/Task6combineeverything.png)
 
