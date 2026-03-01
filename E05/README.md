@@ -430,7 +430,7 @@ Paginated response with metadata is shown below:
 - ![Task6](./screenshots/Task6combineeverything.png)
 
 
-##AI Usage
+**AI Usage**
 
 I used AI assistance approximately 15–20% of the time.
 
@@ -444,7 +444,7 @@ AI helped me:
 
 However, I personally implemented, tested, and verified all functionality.
 
-##Final Reflection
+**Final Reflection**
 
 This exercise helped me understand how real-world APIs handle large datasets.
 
