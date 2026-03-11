@@ -224,7 +224,7 @@ In this task, I implemented custom error handling to make API responses more con
 First, I created a custom error class called AppError.
 
 Example:
-```json
+```js
 class AppError extends Error {
   constructor(message, statusCode) {
     super(message);
@@ -238,7 +238,7 @@ export default AppError;
 This class allows the application to return errors with both a message and a status code.
 
 Example usage inside a controller:
-```json
+```js
 
 if (!user) {
   throw new AppError("User not found", 404);
