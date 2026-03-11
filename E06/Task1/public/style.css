@@ -1,0 +1,178 @@
+:root {
+  --bg: #0b1220;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-strong: rgba(255, 255, 255, 0.1);
+  --text: #e8eefc;
+  --muted: rgba(232, 238, 252, 0.72);
+  --border: rgba(255, 255, 255, 0.14);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 18px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 700px at 10% 10%, #16264e 0%, transparent 55%),
+    radial-gradient(900px 600px at 90% 0%, #1d4ed8 0%, transparent 55%),
+    radial-gradient(1000px 700px at 50% 100%, #0ea5e9 0%, transparent 45%),
+    var(--bg);
+}
+
+h1 {
+  max-width: 980px;
+  margin: 0 auto 18px auto;
+  font-size: 34px;
+  letter-spacing: 0.2px;
+}
+
+section {
+  max-width: 980px;
+  margin: 16px auto;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  margin: 0 0 14px 0;
+  font-size: 20px;
+  color: var(--text);
+}
+
+#message {
+  margin: 10px 0 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text);
+  outline: none;
+}
+
+form input::placeholder {
+  color: rgba(232, 238, 252, 0.55);
+}
+
+form input:focus {
+  border-color: rgba(14, 165, 233, 0.7);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.18);
+}
+
+form button {
+  grid-column: span 5;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #081018;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+form button:hover {
+  filter: brightness(1.05);
+}
+
+form button:active {
+  transform: translateY(1px);
+}
+
+#albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.album {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card-strong);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.album:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.album h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.album p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.album button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.16);
+  color: #fecaca;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.08s ease;
+}
+
+.album button:hover {
+  filter: brightness(1.08);
+}
+
+.album button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  #albums {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  form button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 560px) {
+  #albums {
+    grid-template-columns: 1fr;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  form button {
+    grid-column: span 1;
+  }
+}

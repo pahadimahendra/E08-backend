@@ -1,6 +1,6 @@
 # Exercise diary / Mahendra Pahadi 
 
-#### **Total points: 93/176**
+#### **Total points: 108/176**
 
 ------------------
 
@@ -68,12 +68,12 @@ Total 17/17
 
 ### [Exercise set 6](E06/README.md)
 
-- [ ] Task 1: 0/4 points - Comments
-- [ ] Task 2: 0/3 points - Comments
-- [ ] Task 3: 0/4 points - Comments
-- [ ] Task 4: 0/4 points - Comments
+- [X] Task 1: 4/4 points - Completed 
+- [X] Task 2: 3/3 points - Completed 
+- [X] Task 3: 4/4 points - Completed 
+- [X] Task 4: 4/4 points - Completed
 
-Total 0/15
+Total 15/15
 
 ------------------
 
