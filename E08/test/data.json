@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Album One",
+    "artist": "Artist A",
+    "year": 2020,
+    "genre": "Pop",
+    "tracks": 10,
+    "owner": "507f1f77bcf86cd799439011"
+  },
+  {
+    "title": "Album Two",
+    "artist": "Artist B",
+    "year": 2021,
+    "genre": "Rock",
+    "tracks": 12,
+    "owner": "507f1f77bcf86cd799439011"
+  }
+]
