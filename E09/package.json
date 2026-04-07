@@ -1,0 +1,19 @@
+{
+  "name": "e09",
+  "version": "1.0.0",
+  "description": "GraphQL server for album API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^5.5.0",
+    "dotenv": "^17.4.1",
+    "graphql": "^16.13.2",
+    "mongoose": "^9.4.1"
+  }
+}
