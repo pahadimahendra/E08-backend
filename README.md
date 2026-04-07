@@ -88,10 +88,10 @@ Total 15/15
 
 ### [Exercise set 8](E08/README.md)
 
-- [ ] Task 1: 0/3 points - Comments
-- [ ] Task 2: 0/4 points - Comments
-- [ ] Task 3: 0/5 points - Comments
-- [ ] Task 4: 0/5 points - Comments
+- [X] Task 1: 3/3 points - Completed 
+- [X] Task 2: 4/4 points - Completed 
+- [X] Task 3: 5/5 points - Completed 
+- [X] Task 4: 5/5 points - Completed 
 
 Total 0/17
 
